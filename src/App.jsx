@@ -5,6 +5,7 @@ import { VariableAccess } from "./components/VariableAccess";
 import { UpdatingProps } from "./components/UpdatingProps";
 import { NewProperties } from "./components/NewProperties";
 import { DeleteProps } from "./components/DeleteProps";
+import { TestingProps } from "./components/TestingProps";
 
 import "./App.css";
 
@@ -43,6 +44,11 @@ const heyDog = {
   // torna il valore di heyDog piuttosto che dell'intera costante senza la prop eliminata. E' normale?
 };
 
+const myObj = {
+  top: "hat",
+  bottom: "pants",
+};
+
 function App() {
   return (
     <div className="App">
@@ -60,6 +66,9 @@ function App() {
       </p>
       <p>
         <DeleteProps heyDog={delete heyDog.bark} />
+      </p>
+      <p>
+        <TestingProps myObj={myObj.hasOwnProperty("top")} />
       </p>
     </div>
   );
