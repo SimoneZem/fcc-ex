@@ -6,6 +6,7 @@ import { UpdatingProps } from "./components/UpdatingProps";
 import { NewProperties } from "./components/NewProperties";
 import { DeleteProps } from "./components/DeleteProps";
 import { TestingProps } from "./components/TestingProps";
+import { ManipulateComplexObjects } from "./components/ManipulateComplexObjects";
 
 import "./App.css";
 
@@ -49,6 +50,13 @@ const myObj = {
   bottom: "pants",
 };
 
+const myMusic = {
+  artist: "Muse",
+  title: "Origin of Symmetry",
+  year: 2002,
+  best_tracks: ["Bliss", "Plug in Baby", "Microcuts"],
+};
+
 function App() {
   return (
     <div className="App">
@@ -69,6 +77,12 @@ function App() {
       </p>
       <p>
         <TestingProps myObj={myObj.hasOwnProperty("top")} />
+      </p>
+      <p>
+        return
+        <ManipulateComplexObjects
+          myMusic={myMusic[("artist", "title", "year", "best_tracks")]}
+        />
       </p>
     </div>
   );
