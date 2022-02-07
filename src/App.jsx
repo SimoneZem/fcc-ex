@@ -7,6 +7,7 @@ import { NewProperties } from "./components/NewProperties";
 import { DeleteProps } from "./components/DeleteProps";
 import { TestingProps } from "./components/TestingProps";
 import { ManipulateComplexObjects } from "./components/ManipulateComplexObjects";
+import { NestedObjects } from "./components/NestedObjects";
 
 import "./App.css";
 
@@ -57,6 +58,18 @@ const myMusic = {
   best_tracks: ["Bliss", "Plug in Baby", "Microcuts"],
 };
 
+const ourStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
 function App() {
   return (
     <div className="App">
@@ -73,7 +86,7 @@ function App() {
         <NewProperties goodDoggo={(goodDoggo.bark = "Woof")} />
       </p>
       <p>
-        <DeleteProps heyDog={delete heyDog.bark} />
+        <DeleteProps test={delete heyDog.bark} />
       </p>
       <p>
         <TestingProps myObj={myObj.hasOwnProperty("top")} />
@@ -83,6 +96,10 @@ function App() {
         <ManipulateComplexObjects
           myMusic={myMusic[("artist", "title", "year", "best_tracks")]}
         />
+      </p>
+
+      <p>
+        <NestedObjects ourStorage={ourStorage.car.inside["glove box"]} />
       </p>
     </div>
   );
