@@ -8,6 +8,7 @@ import { DeleteProps } from "./components/DeleteProps";
 import { TestingProps } from "./components/TestingProps";
 import { ManipulateComplexObjects } from "./components/ManipulateComplexObjects";
 import { NestedObjects } from "./components/NestedObjects";
+import { NestedArrays } from "./components/NestedArrays";
 
 import "./App.css";
 
@@ -70,6 +71,17 @@ const ourStorage = {
   },
 };
 
+const myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+
 function App() {
   return (
     <div className="App">
@@ -100,6 +112,9 @@ function App() {
 
       <p>
         <NestedObjects ourStorage={ourStorage.car.inside["glove box"]} />
+      </p>
+      <p>
+        <NestedArrays myPlants={myPlants[1].list[1]} />
       </p>
     </div>
   );
