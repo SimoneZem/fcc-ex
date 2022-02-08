@@ -10,6 +10,7 @@ import { ManipulateComplexObjects } from "./components/ManipulateComplexObjects"
 import { NestedObjects } from "./components/NestedObjects";
 import { NestedArrays } from "./components/NestedArrays";
 import { WhileLoops } from "./components/WhileLoops";
+import { ForLoops } from "./components/ForLoops";
 
 import "./App.css";
 
@@ -90,6 +91,11 @@ while (i >= 0) {
   i--;
 }
 
+const forArray = [];
+for (var i = 1; i <= 5; i++) {
+  myArray.push(i);
+}
+
 function App() {
   return (
     <div className="App">
@@ -126,6 +132,9 @@ function App() {
       </p>
       <p>
         <WhileLoops myArray={myArray} />
+      </p>
+      <p>
+        <ForLoops forArray={forArray} />
       </p>
     </div>
   );
