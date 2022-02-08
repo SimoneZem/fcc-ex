@@ -9,6 +9,7 @@ import { TestingProps } from "./components/TestingProps";
 import { ManipulateComplexObjects } from "./components/ManipulateComplexObjects";
 import { NestedObjects } from "./components/NestedObjects";
 import { NestedArrays } from "./components/NestedArrays";
+import { WhileLoops } from "./components/WhileLoops";
 
 import "./App.css";
 
@@ -82,6 +83,13 @@ const myPlants = [
   },
 ];
 
+const myArray = [];
+var i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i--;
+}
+
 function App() {
   return (
     <div className="App">
@@ -115,6 +123,9 @@ function App() {
       </p>
       <p>
         <NestedArrays myPlants={myPlants[1].list[1]} />
+      </p>
+      <p>
+        <WhileLoops myArray={myArray} />
       </p>
     </div>
   );
