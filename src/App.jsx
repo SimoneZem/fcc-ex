@@ -15,6 +15,7 @@ import { ForOddNumbers } from "./components/ForOddNumbers";
 import { CountBackwards } from "./components/CountBackwards";
 import { IterateTrough } from "./components/IterateTrough";
 import { NestForLoops } from "./components/NestForLoops";
+import { DoWhileLoops } from "./components/DoWhileLoops";
 
 import "./App.css";
 
@@ -128,6 +129,13 @@ for (var x = 0; x < multipleArray.length; x++) {
   }
 }
 
+const doArray = [];
+var i = 10;
+do {
+  doArray.push(i);
+  i++;
+} while (i <= 5);
+
 function App() {
   return (
     <div className="App">
@@ -178,6 +186,9 @@ function App() {
       </p>
       <p>
         <NestForLoops product={product} />
+      </p>
+      <p>
+        <DoWhileLoops doArray={i} />
       </p>
     </div>
   );
