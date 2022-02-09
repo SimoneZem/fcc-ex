@@ -12,6 +12,7 @@ import { NestedArrays } from "./components/NestedArrays";
 import { WhileLoops } from "./components/WhileLoops";
 import { ForLoops } from "./components/ForLoops";
 import { ForOddNumbers } from "./components/ForOddNumbers";
+import { CountBackwards } from "./components/CountBackwards";
 
 import "./App.css";
 
@@ -94,12 +95,17 @@ while (i >= 0) {
 
 const forArray = [];
 for (var i = 1; i <= 5; i++) {
-  myArray.push(i);
+  forArray.push(i);
 }
 
 const oddArray = [];
 for (let i = 1; i < 10; i += 2) {
-  myArray.push(i);
+  oddArray.push(i);
+}
+
+const myCount = [];
+for (let i = 9; i >= 1; i -= 2) {
+  myCount.push(i);
 }
 
 function App() {
@@ -143,7 +149,10 @@ function App() {
         <ForLoops forArray={forArray} />
       </p>
       <p>
-        <ForOddNumbers oddArray={forArray} />
+        <ForOddNumbers oddArray={oddArray} />
+      </p>
+      <p>
+        <CountBackwards myCount={myCount} />
       </p>
     </div>
   );
