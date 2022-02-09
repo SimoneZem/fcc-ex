@@ -13,6 +13,7 @@ import { WhileLoops } from "./components/WhileLoops";
 import { ForLoops } from "./components/ForLoops";
 import { ForOddNumbers } from "./components/ForOddNumbers";
 import { CountBackwards } from "./components/CountBackwards";
+import { IterateTrough } from "./components/IterateTrough";
 
 import "./App.css";
 
@@ -108,6 +109,12 @@ for (let i = 9; i >= 1; i -= 2) {
   myCount.push(i);
 }
 
+const troughArray = [2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i < troughArray.length; i++) {
+  total += troughArray[i];
+}
+
 function App() {
   return (
     <div className="App">
@@ -130,7 +137,6 @@ function App() {
         <TestingProps myObj={myObj.hasOwnProperty("top")} />
       </p>
       <p>
-        return
         <ManipulateComplexObjects
           myMusic={myMusic[("artist", "title", "year", "best_tracks")]}
         />
@@ -153,6 +159,9 @@ function App() {
       </p>
       <p>
         <CountBackwards myCount={myCount} />
+      </p>
+      <p>
+        <IterateTrough troughArray={total} />
       </p>
     </div>
   );
