@@ -14,6 +14,7 @@ import { ForLoops } from "./components/ForLoops";
 import { ForOddNumbers } from "./components/ForOddNumbers";
 import { CountBackwards } from "./components/CountBackwards";
 import { IterateTrough } from "./components/IterateTrough";
+import { NestForLoops } from "./components/NestForLoops";
 
 import "./App.css";
 
@@ -100,12 +101,12 @@ for (var i = 1; i <= 5; i++) {
 }
 
 const oddArray = [];
-for (let i = 1; i < 10; i += 2) {
+for (var i = 1; i < 10; i += 2) {
   oddArray.push(i);
 }
 
 const myCount = [];
-for (let i = 9; i >= 1; i -= 2) {
+for (var i = 9; i >= 1; i -= 2) {
   myCount.push(i);
 }
 
@@ -113,6 +114,18 @@ const troughArray = [2, 3, 4, 5, 6];
 var total = 0;
 for (var i = 0; i < troughArray.length; i++) {
   total += troughArray[i];
+}
+
+const multipleArray = [
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+];
+var product = 1;
+for (var x = 0; x < multipleArray.length; x++) {
+  for (var y = 0; y < multipleArray[x].length; y++) {
+    product *= multipleArray[x][y];
+  }
 }
 
 function App() {
@@ -162,6 +175,9 @@ function App() {
       </p>
       <p>
         <IterateTrough troughArray={total} />
+      </p>
+      <p>
+        <NestForLoops product={product} />
       </p>
     </div>
   );
