@@ -19,6 +19,7 @@ import { DoWhileLoops } from "./components/DoWhileLoops";
 import { RandomFractions } from "./components/RandomFractions";
 import { RandomWholeNumbers } from "./components/RandomWholeNumbers";
 import { RangeWholeNumbers } from "./components/RangeWholeNumbers";
+import { ParseInt } from "./components/ParseInt";
 
 import "./App.css";
 
@@ -147,6 +148,9 @@ const myRange = [Math.floor(Math.random() * (myMax - myMin + 1)) + myMin];
 var myMin = 5;
 var myMax = 15;
 
+const myConversion = "Mattew Bellamy";
+// Con un valore "009" tornerà 9, con un valore alfabetico tornerà NaN
+
 function App() {
   return (
     <div className="App">
@@ -212,6 +216,9 @@ function App() {
             (myRange, Math.floor(Math.random() * (myMax - myMin + 1)) + myMin)
           }
         />
+      </p>
+      <p>
+        <ParseInt myConversion={parseInt(myConversion)} />
       </p>
     </div>
   );
