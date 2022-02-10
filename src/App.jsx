@@ -18,6 +18,7 @@ import { NestForLoops } from "./components/NestForLoops";
 import { DoWhileLoops } from "./components/DoWhileLoops";
 import { RandomFractions } from "./components/RandomFractions";
 import { RandomWholeNumbers } from "./components/RandomWholeNumbers";
+import { RangeWholeNumbers } from "./components/RangeWholeNumbers";
 
 import "./App.css";
 
@@ -142,6 +143,10 @@ const myFraction = [Math.random()];
 
 const myWholeNumber = [Math.floor(Math.random() * 10)];
 
+const myRange = [Math.floor(Math.random() * (myMax - myMin + 1)) + myMin];
+var myMin = 5;
+var myMax = 15;
+
 function App() {
   return (
     <div className="App">
@@ -168,7 +173,6 @@ function App() {
           myMusic={myMusic[("artist", "title", "year", "best_tracks")]}
         />
       </p>
-
       <p>
         <NestedObjects ourStorage={ourStorage.car.inside["glove box"]} />
       </p>
@@ -201,6 +205,13 @@ function App() {
       </p>
       <p>
         <RandomWholeNumbers myWholeNumber={myWholeNumber} />
+      </p>
+      <p>
+        <RangeWholeNumbers
+          myRange={
+            (myRange, Math.floor(Math.random() * (myMax - myMin + 1)) + myMin)
+          }
+        />
       </p>
     </div>
   );
