@@ -17,6 +17,7 @@ import { IterateTrough } from "./components/IterateTrough";
 import { NestForLoops } from "./components/NestForLoops";
 import { DoWhileLoops } from "./components/DoWhileLoops";
 import { RandomFractions } from "./components/RandomFractions";
+import { RandomWholeNumbers } from "./components/RandomWholeNumbers";
 
 import "./App.css";
 
@@ -137,7 +138,9 @@ do {
   i++;
 } while (i <= 5);
 
-const myFraction = [];
+const myFraction = [Math.random()];
+
+const myWholeNumber = [Math.floor(Math.random() * 10)];
 
 function App() {
   return (
@@ -194,7 +197,10 @@ function App() {
         <DoWhileLoops doArray={i} />
       </p>
       <p>
-        <RandomFractions myFraction={Math.random()} />
+        <RandomFractions myFraction={myFraction} />
+      </p>
+      <p>
+        <RandomWholeNumbers myWholeNumber={myWholeNumber} />
       </p>
     </div>
   );
