@@ -16,6 +16,7 @@ import { CountBackwards } from "./components/CountBackwards";
 import { IterateTrough } from "./components/IterateTrough";
 import { NestForLoops } from "./components/NestForLoops";
 import { DoWhileLoops } from "./components/DoWhileLoops";
+import { RandomFractions } from "./components/RandomFractions";
 
 import "./App.css";
 
@@ -136,6 +137,8 @@ do {
   i++;
 } while (i <= 5);
 
+const myFraction = [];
+
 function App() {
   return (
     <div className="App">
@@ -189,6 +192,9 @@ function App() {
       </p>
       <p>
         <DoWhileLoops doArray={i} />
+      </p>
+      <p>
+        <RandomFractions myFraction={Math.random()} />
       </p>
     </div>
   );
