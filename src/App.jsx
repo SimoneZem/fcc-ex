@@ -140,11 +140,11 @@ do {
   i++;
 } while (i <= 5);
 
-const myFraction = [Math.random()];
+const myFraction = Math.random();
 
-const myWholeNumber = [Math.floor(Math.random() * 10)];
+const myWholeNumber = Math.floor(Math.random() * 10);
 
-const myRange = [Math.floor(Math.random() * (myMax - myMin + 1)) + myMin];
+const myRange = Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
 var myMin = 5;
 var myMax = 15;
 
